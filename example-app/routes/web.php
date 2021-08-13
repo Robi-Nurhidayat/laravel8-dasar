@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use function Ramsey\Uuid\v1;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,4 +17,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+
+Route::get('contact', function(){
+
+    $nama = 'Robi Nurhidayat';
+    return view('contact', compact('nama'));
 });
