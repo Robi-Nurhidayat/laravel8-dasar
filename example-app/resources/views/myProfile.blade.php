@@ -10,7 +10,6 @@
 <body>
 
     @include('layouts.navbar')
-
-
+    <span>Hello my name is {{ $nama }}</span>
 </body>
 </html>

@@ -16,12 +16,25 @@ use function Ramsey\Uuid\v1;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 
 Route::get('contact', function(){
 
+
+    return view('contact');
+});
+
+
+Route::get('about', function(){
+
+    return view('about');
+});
+
+
+Route::get('myProfile', function(){
+
     $nama = 'Robi Nurhidayat';
-    return view('contact', compact('nama'));
+    return view('myProfile', ['nama' => $nama]);
 });
