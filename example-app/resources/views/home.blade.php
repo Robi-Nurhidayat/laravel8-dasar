@@ -1,15 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-</head>
-<body>
+@extends('layouts.app', ['title' => 'home page'])
 
-    @include('layouts.navbar')
+@section('content')
+    Home page
 
-</body>
-</html>
+    <p>bagian bawah menggunakan component</p>
+
+
+
+    {{-- tulis components bisa menggunakan @component atau <x-nama_component> --}}
+
+    <x-alert>
+        {{-- @component('components.alert') --}}
+
+        @slot('header')
+            ini header
+        @endslot
+
+        @slot('content')
+
+        ini adalah isi
+        <br>
+
+        @endslot
+
+
+        @slot('footer')
+            ini adalah foooter
+        @endslot
+
+        {{-- @endcomponent         --}}
+    </x-alert>
+
+
+@endsection
