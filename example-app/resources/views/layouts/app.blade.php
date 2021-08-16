@@ -11,7 +11,7 @@
 
     <x-navbar></x-navbar>
 
-    @yield('content')
+    {{ $slot }}
 
 </body>
 </html>

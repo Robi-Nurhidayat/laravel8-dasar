@@ -1,35 +1,4 @@
-@extends('layouts.app', ['title' => 'home page'])
+<x-app-layout title="halaman home">
 
-@section('content')
-    Home page
-
-    <p>bagian bawah menggunakan component</p>
-
-
-
-    {{-- tulis components bisa menggunakan @component atau <x-nama_component> --}}
-
-    <x-alert>
-        {{-- @component('components.alert') --}}
-
-        @slot('header')
-            ini header
-        @endslot
-
-        @slot('content')
-
-        ini adalah isi
-        <br>
-
-        @endslot
-
-
-        @slot('footer')
-            ini adalah foooter
-        @endslot
-
-        {{-- @endcomponent         --}}
-    </x-alert>
-
-
-@endsection
+    <h1>ini adalah halaman home</h1>
+</x-app-layout>

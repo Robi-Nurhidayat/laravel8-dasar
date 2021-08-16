@@ -1,5 +1,3 @@
-@extends('layouts.app', ['title' => 'about page'])
+<x-app-layout title="halaman about">
 
-@section('content')
-    About page
-@endsection
+</x-app-layout>
