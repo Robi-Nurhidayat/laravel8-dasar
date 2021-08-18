@@ -42,3 +42,8 @@ Route::get('/myProfile', function(){
 
 
 Route::get('task', [TasksController::class, 'index']);
+Route::post('tasks', [TasksController::class, 'store']);
+
+Route::get('tasks/{id}/edit', [TasksController::class, 'edit']);
+Route::put('tasks/{id}', [TasksController::class, 'update']);
+Route::delete('/task/{id}/delete', [TasksController::class, 'destroy']);
