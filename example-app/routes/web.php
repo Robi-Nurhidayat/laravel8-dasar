@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TasksController;
 use Illuminate\Support\Facades\Route;
 
 use function Ramsey\Uuid\v1;
@@ -38,3 +39,6 @@ Route::get('/myProfile', function(){
     $nama = 'Robi Nurhidayat';
     return view('myProfile', ['nama' => $nama]);
 });
+
+
+Route::get('task', [TasksController::class, 'index']);
